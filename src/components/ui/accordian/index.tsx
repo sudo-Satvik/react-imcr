@@ -31,7 +31,7 @@ export default function Accordion() {
   };
 
   return (
-    <Wrapper bgColor="bg-violet-100" isFlex>
+    <Wrapper bgColor="bg-violet-100" heading="Accordion">
       <div className="flex flex-col gap-4">
         {/* Toggle Button */}
         <div className="flex gap-3 items-center mb-4">
@@ -48,9 +48,7 @@ export default function Accordion() {
             />
           </div>
 
-          <p className="text-md font-semibold">
-            Toggle Multi-Select Accordion
-          </p>
+          <p className="text-md font-semibold">Toggle Multi-Select Accordion</p>
         </div>
 
         {ACCORDION_DATA?.length > 0 ? (
@@ -71,13 +69,9 @@ export default function Accordion() {
               >
                 {/* Title */}
                 <div className="flex items-center justify-between gap-4">
-                  <h3 className="text-md font-semibold">
-                    {item.question}
-                  </h3>
+                  <h3 className="text-md font-semibold">{item.question}</h3>
 
-                  <span className="text-2xl">
-                    {isOpen ? "–" : "+"}
-                  </span>
+                  <span className="text-2xl">{isOpen ? "–" : "+"}</span>
                 </div>
 
                 {/* Content */}
