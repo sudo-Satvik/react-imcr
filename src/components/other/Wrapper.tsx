@@ -17,11 +17,7 @@ const Wrapper: React.FC<WrapperProps> = ({
 }) => {
   return (
     <div
-      style={
-        bgColorCSS && {
-          backgroundColor: bgColorCSS,
-        }
-      }
+      style={bgColorCSS ? { backgroundColor: bgColorCSS } : undefined}
       className={`min-h-screen w-full ${bgColor} ${isFlex && "flex flex-col gap-20 justify-center items-center"}`}
     >
       {heading && <h1 className="text-8xl font-semibold">{heading}</h1>}
