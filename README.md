@@ -1,75 +1,131 @@
-# React + TypeScript + Vite
+# React Machine Coding Interview Questions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A collection of React.js machine coding questions and frontend interview challenges that I am practicing to strengthen my problem-solving skills, React fundamentals, TypeScript knowledge, and frontend system design concepts.
 
-Currently, two official plugins are available:
+The goal of this repository is to prepare for Frontend Engineer and SDE interviews by building commonly asked machine coding problems from scratch.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
 
-## React Compiler
+* React.js
+* TypeScript
+* Vite
+* Tailwind CSS
+* REST APIs
+* Custom Hooks
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## Machine Coding Questions
 
-## Expanding the ESLint configuration
+### Beginner
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* [x] Accordion
+* [x] Random Color Generator
+* [ ] Star Rating
+* [ ] Image Slider
+* [ ] Load More Button
+* [ ] Tree View / Recursive Navigation Menu
+* [ ] QR Code Generator
+* [ ] Light & Dark Theme Switch
+* [ ] Scroll Indicator
+* [ ] Tabs
+* [ ] Modal Popup
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Intermediate
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* [ ] Advance Todo App
+* [ ] Advance Calculator App
+* [ ] GitHub Profile Finder
+* [ ] Search Autocomplete with API Integration
+* [ ] Tic Tac Toe
+* [ ] Feature Flag Implementation
+* [ ] Scroll to Top & Bottom
+* [ ] Scroll to Particular Section
+
+---
+
+### Custom Hooks
+
+* [ ] useFetch
+* [ ] useOnClickOutside
+* [ ] useWindowResize / useResponsive / useDevice
+
+---
+
+### Projects
+
+* [ ] Weather App
+* [ ] Food Recipe App
+* [ ] Shopping Cart App
+* [ ] Expense Tracker App
+* [ ] MERN Stack Blog App
+
+---
+
+## Topics Covered
+
+* State Management
+* Component Composition
+* Custom Hooks
+* API Integration
+* Recursive Components
+* Performance Optimization
+* Responsive UI
+* Theme Management
+* Accessibility
+* Reusable Components
+* TypeScript
+* Frontend Architecture
+
+---
+
+## Purpose
+
+This repository is created to:
+
+* Practice React machine coding questions.
+* Prepare for SDE and Frontend Engineer interviews.
+* Improve problem-solving skills.
+* Build reusable UI components.
+* Strengthen React and TypeScript fundamentals.
+
+---
+
+## Future Additions
+
+* Infinite Scroll
+* Virtualized Lists
+* Drag and Drop Kanban Board
+* Multi-Step Form Wizard
+* File Explorer
+* Data Table
+* Debounce and Throttle Hooks
+* Toast Notification System
+* Command Palette
+* Rich Text Editor
+
+---
+
+## Run Locally
+
+```bash
+git clone <repository-url>
+
+cd react-machine-coding
+
+npm install
+
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Contributing
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Suggestions, improvements, and additional machine coding questions are always welcome.
+
+---
+
+⭐ If you find this repository useful, consider giving it a star.
