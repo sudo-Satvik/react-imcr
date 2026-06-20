@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Wrapper from "../../other/Wrapper";
 import ACCORDION_DATA from "./data";
+import ToggleBtn from "../../other/ToggleBtn";
 
 export default function Accordion() {
   const [isMultiple, setIsMultiple] = useState<boolean>(false);
@@ -24,7 +25,7 @@ export default function Accordion() {
     setMultipleSelect(cloneArray);
   };
 
-  const toggleMultiple = () => {
+  const handleToggleMultiple = () => {
     setIsMultiple((prev) => !prev);
     setSingleSelect(null);
     setMultipleSelect([]);
@@ -35,18 +36,10 @@ export default function Accordion() {
       <div className="flex flex-col gap-4">
         {/* Toggle Button */}
         <div className="flex gap-3 items-center mb-4">
-          <div
-            className={`w-10 h-5 rounded-full cursor-pointer transition-all ${
-              isMultiple ? "bg-blue-300" : "bg-gray-300"
-            }`}
-            onClick={toggleMultiple}
-          >
-            <div
-              className={`w-5 h-5 bg-blue-600 rounded-full shadow-lg transition-all ${
-                isMultiple ? "translate-x-5" : "translate-x-0"
-              }`}
-            />
-          </div>
+          <ToggleBtn 
+            triggerFunc={handleToggleMultiple}
+            condition={isMultiple}
+          />
 
           <p className="text-md font-semibold">
             Toggle Multi-Select Accordion {isMultiple ? "Off" : "On"}
