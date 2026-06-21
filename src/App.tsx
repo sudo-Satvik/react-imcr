@@ -2,6 +2,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Accordion from "./components/ui/accordian";
 import RandomColor from "./components/ui/random-color-gen";
 import StarRating from "./components/ui/star-rating";
+import ImageSlider from "./components/ui/image-slider";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Accordion />
       <RandomColor />
       <StarRating />
+      <ImageSlider url="https://picsum.photos/v2/list" page="1" limit="10" />
     </>
   );
 }
