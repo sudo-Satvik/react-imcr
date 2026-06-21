@@ -21,8 +21,8 @@ The goal of this repository is to prepare for Frontend Engineer and SDE intervie
 
 * [x] Accordion
 * [x] Random Color Generator
-* [ ] Star Rating
-* [ ] Image Slider
+* [x] Star Rating
+* [x] Image Slider
 * [ ] Load More Button
 * [ ] Tree View / Recursive Navigation Menu
 * [ ] QR Code Generator
