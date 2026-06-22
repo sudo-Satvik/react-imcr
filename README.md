@@ -23,7 +23,7 @@ The goal of this repository is to prepare for Frontend Engineer and SDE intervie
 * [x] Random Color Generator
 * [x] Star Rating
 * [x] Image Slider
-* [ ] Load More Button
+* [x] Load More Button
 * [ ] Tree View / Recursive Navigation Menu
 * [ ] QR Code Generator
 * [ ] Light & Dark Theme Switch
