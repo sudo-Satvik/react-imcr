@@ -4,6 +4,7 @@ import RandomColor from "./components/ui/random-color-gen";
 import StarRating from "./components/ui/star-rating";
 import ImageSlider from "./components/ui/image-slider";
 import LoadMore from "./components/ui/load-more";
+import TreeView from "./components/ui/tree-view";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <StarRating />
       <ImageSlider url="https://picsum.photos/v2/list" page="1" limit="10" />
       <LoadMore />
+      <TreeView />
     </>
   );
 }
