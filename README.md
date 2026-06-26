@@ -29,7 +29,7 @@ The goal of this repository is to prepare for Frontend Engineer and SDE intervie
 * [x] Light & Dark Theme Switch
 * [x] Scroll Indicator
 * [x] Tabs
-* [x] Modal Popup
+* [ ] Modal Popup
 
 ---
 
