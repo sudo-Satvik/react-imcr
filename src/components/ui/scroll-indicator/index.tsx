@@ -15,7 +15,7 @@ const ScrollIndicator = () => {
   const [scrollPercentage, setScrollPercentage] = useState<number>(0);
 
   useEffect(() => {
-    const fetchData = async (getUrl) => {
+    const fetchData = async (getUrl: string) => {
       try {
         setLoading(true);
         const response = await fetch(getUrl);
@@ -30,7 +30,7 @@ const ScrollIndicator = () => {
         setData(resData?.products);
       } catch (error) {
         console.error(error);
-        setErrorMsg(error);
+        setErrorMsg(error as string);
       }
     };
 
