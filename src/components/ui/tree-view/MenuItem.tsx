@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-interface MenuNode {
-  id: string;
+export interface MenuNode {
   label: string;
+  to: string;
   children?: MenuNode[];
 }
 
@@ -13,7 +13,7 @@ interface Props {
 const MenuItem = ({ menuData }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const hasChildren = menuData.children?.length > 0;
+  const hasChildren = !!(menuData.children && menuData.children.length > 0);
 
   return (
     <li className="my-2">
@@ -30,10 +30,10 @@ const MenuItem = ({ menuData }: Props) => {
         {hasChildren && (isOpen ? " -" : " +")}
       </button>
 
-      {isOpen && hasChildren && (
+      {isOpen && hasChildren && menuData.children && (
         <ul className="ml-8">
-          {menuData.children!.map((child) => (
-            <MenuItem key={child.id} menuData={child} />
+          {menuData.children.map((child) => (
+            <MenuItem key={child.label} menuData={child} />
           ))}
         </ul>
       )}

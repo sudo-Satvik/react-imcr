@@ -2,10 +2,22 @@ import { useEffect, useState } from "react";
 import Wrapper from "../../other/Wrapper";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const ImageSlider = ({ url, page, limit }) => {
-  const [images, setImages] = useState([]);
+interface ImageItem {
+  id: string;
+  download_url: string;
+  author: string;
+}
+
+interface ImageSliderProps {
+  url: string;
+  page: string;
+  limit: string;
+}
+
+const ImageSlider = ({ url, page, limit }: ImageSliderProps) => {
+  const [images, setImages] = useState<ImageItem[]>([]);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -14,12 +26,12 @@ const ImageSlider = ({ url, page, limit }) => {
         setLoading(true);
         setError(null);
         const response = await fetch(
-          `${`https://picsum.photos/v2/list`}?page=${page}&limit=${limit}`,
+          `${url}?page=${page}&limit=${limit}`,
         );
         const data = await response.json();
         setImages(data);
       } catch (e) {
-        setError(e?.message);
+        setError(e instanceof Error ? e.message : "An error occurred");
       } finally {
         setLoading(false);
       }

@@ -1,4 +1,12 @@
-const Card = ({ title, description, imageUrl, price, discountPercentage }) => {
+interface CardProps {
+  title: string;
+  description: string;
+  imageUrl: string;
+  price: number;
+  discountPercentage: number;
+}
+
+const Card = ({ title, description, imageUrl, price, discountPercentage }: CardProps) => {
   return (
     <div className="w-80 rounded-md flex flex-col bg-white">
       {imageUrl ? (
