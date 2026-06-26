@@ -24,8 +24,8 @@ The goal of this repository is to prepare for Frontend Engineer and SDE intervie
 * [x] Star Rating
 * [x] Image Slider
 * [x] Load More Button
-* [ ] Tree View / Recursive Navigation Menu
-* [ ] QR Code Generator
+* [x] Tree View / Recursive Navigation Menu
+* [x] QR Code Generator
 * [ ] Light & Dark Theme Switch
 * [ ] Scroll Indicator
 * [ ] Tabs

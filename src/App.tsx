@@ -6,6 +6,7 @@ import ImageSlider from "./components/ui/image-slider";
 import LoadMore from "./components/ui/load-more";
 import TreeView from "./components/ui/tree-view";
 import QRCodeGenerator from "./components/ui/qr-code-generator";
+import ThemeSwitcher from "./components/ui/theme-switcher";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <LoadMore />
       <TreeView />
       <QRCodeGenerator />
+      <ThemeSwitcher />
     </>
   );
 }
