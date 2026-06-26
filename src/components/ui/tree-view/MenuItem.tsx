@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export interface MenuNode {
+interface MenuNode {
   label: string;
   to: string;
   children?: MenuNode[];

@@ -1,4 +1,10 @@
-import MenuItem, { MenuNode } from "./MenuItem";
+import MenuItem from "./MenuItem";
+
+interface MenuNode {
+  label: string;
+  to: string;
+  children?: MenuNode[];
+}
 
 interface MenuListProps {
   menu: MenuNode[];
