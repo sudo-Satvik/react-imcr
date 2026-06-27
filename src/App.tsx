@@ -11,6 +11,7 @@ const QRCodeGenerator = lazy(() => import("./components/ui/qr-code-generator"));
 const ThemeSwitcher = lazy(() => import("./components/ui/theme-switcher"));
 const ScrollIndicator = lazy(() => import("./components/ui/scroll-indicator"));
 const Tabs = lazy(() => import("./components/ui/custom-tabs"));
+const ModalParent = lazy(() => import("./components/ui/custom-modal"));
 
 const LoaderComponent = ({ compName }: { compName: string }) => (
   <p>Loading {compName}...</p>
@@ -49,6 +50,9 @@ function App() {
       </Suspense>
       <Suspense fallback={<LoaderComponent compName="Tabs" />}>
         <Tabs />
+      </Suspense>
+      <Suspense fallback={<LoaderComponent compName="Custom Modal" />}>
+        <ModalParent />
       </Suspense>
     </>
   );

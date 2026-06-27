@@ -1,3 +1,11 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+button {
+    cursor: pointer;
+}
+
+.bodyFixed {
+    overflow: hidden;
+}
