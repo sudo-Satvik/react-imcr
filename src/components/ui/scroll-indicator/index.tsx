@@ -39,14 +39,6 @@ const ScrollIndicator = () => {
 
   // Scroll Logic
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScrollPercentage);
-
-    return () => {
-      window.removeEventListener("scroll", () => {});
-    };
-  }, []);
-
   const handleScrollPercentage = () => {
     const howMuchScrolled =
       document.documentElement.scrollTop || document.body.scrollTop;
@@ -57,6 +49,14 @@ const ScrollIndicator = () => {
 
     setScrollPercentage(Math.floor((howMuchScrolled / height) * 100));
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScrollPercentage);
+
+    return () => {
+      window.removeEventListener("scroll", () => {});
+    };
+  }, []);
 
   return (
     <Wrapper bgColor="bg-pink-100" isFlex={false}>

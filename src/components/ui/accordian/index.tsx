@@ -12,7 +12,7 @@ export default function Accordion() {
     setSingleSelect(selectedId === singleSelect ? null : selectedId);
 
   const handleMultipleSelection = (selectedId: string): void => {
-    let cloneArray = [...multipleSelect];
+    const cloneArray = [...multipleSelect];
 
     const selectedIndex = cloneArray.indexOf(selectedId);
 

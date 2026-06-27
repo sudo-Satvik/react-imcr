@@ -18,7 +18,7 @@ const LoadMore = () => {
   const [error, setError] = useState<string | null>(null);
   const [productData, setProductData] = useState<Product[]>([]);
   const [skipCount, setSkipCount] = useState(0);
-  const [disableLoadMoreBtn, setDisableLoadMoreBtn] = useState<boolean>(false);
+  const disableLoadMoreBtn = productData && productData.length >= 100;
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -51,12 +51,6 @@ const LoadMore = () => {
 
     fetchProducts();
   }, [skipCount]);
-
-  useEffect(() => {
-    if (productData && productData.length >= 100) {
-      setDisableLoadMoreBtn(true);
-    }
-  }, [productData]);
 
   const truncateText = (text: string, maxLength: number): string => {
     return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;

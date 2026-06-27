@@ -1,7 +1,7 @@
 import React from "react";
 
 interface IToggleBtnProps {
-  condition: any;
+  condition: boolean | number | string | unknown;
   triggerFunc: () => void;
 }
 

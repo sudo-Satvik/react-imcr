@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useCallback } from "react";
 import ToggleBtn from "../../other/ToggleBtn";
 import Wrapper from "../../other/Wrapper";
 
@@ -9,33 +9,27 @@ const RandomColor = () => {
   const [color, setColor] = useState("#FFFFFF");
   const [opacity, setOpacity] = useState(100);
 
-  useEffect(() => {
-    generateColor();
+  const generateColor = useCallback(() => {
+    const random = (max: number) => Math.floor(Math.random() * max);
+
+    if (isHexColor) {
+      let generatedColor = "#";
+      for (let i = 0; i < 6; i++) {
+        generatedColor += HEX_MAP[random(16)];
+      }
+      setColor(generatedColor);
+    } else {
+      const red = random(256);
+      const green = random(256);
+      const blue = random(256);
+      setColor(`rgb(${red}, ${green}, ${blue})`);
+    }
   }, [isHexColor]);
 
-  const random = (max: number) => Math.floor(Math.random() * max);
-
-  const generateHexColor = () => {
-    let generatedColor = "#";
-
-    for (let i = 0; i < 6; i++) {
-      generatedColor += HEX_MAP[random(16)];
-    }
-
-    setColor(generatedColor);
-  };
-
-  const generateRGBColor = () => {
-    const red = random(256);
-    const green = random(256);
-    const blue = random(256);
-
-    setColor(`rgb(${red}, ${green}, ${blue})`);
-  };
-
-  const generateColor = () => {
-    isHexColor ? generateHexColor() : generateRGBColor();
-  };
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    generateColor();
+  }, [generateColor]);
 
   const handleColorCodeChange = () => {
     setIsHexColor((prev) => !prev);

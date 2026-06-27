@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function useLocalStorage(key: string, defaultValue: string) {
   const [value, setValue] = useState(() => {
-    let currentValue: any;
+    let currentValue: unknown;
 
     try {
       currentValue = JSON.parse(

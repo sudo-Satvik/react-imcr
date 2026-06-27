@@ -12,7 +12,7 @@ interface TabsProps {
 const TabComponent: FC<TabsProps> = ({ tabContent }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  function handleOnClick(getCurrentIndex) {
+  function handleOnClick(getCurrentIndex: number) {
     setCurrentIndex(getCurrentIndex);
   }
 

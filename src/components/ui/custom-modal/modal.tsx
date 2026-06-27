@@ -1,6 +1,19 @@
+import type React from "react";
 import { X } from "lucide-react";
 
-const Modal = ({ onCrossClick, header, children, footer }) => {
+interface IModalProps {
+  onCrossClick: () => void;
+  header: React.ReactNode;
+  children: React.ReactNode;
+  footer: React.ReactNode;
+}
+
+const Modal: React.FC<IModalProps> = ({
+  onCrossClick,
+  header,
+  children,
+  footer,
+}) => {
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-lg"
