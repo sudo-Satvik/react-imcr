@@ -6,6 +6,16 @@ button {
     cursor: pointer;
 }
 
+button,
+button:focus,
+button:active {
+    border: none;
+}
+
 .bodyFixed {
     overflow: hidden;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
 }

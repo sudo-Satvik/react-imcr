@@ -3,9 +3,9 @@ import { X } from "lucide-react";
 
 interface IModalProps {
   onCrossClick: () => void;
-  header: React.ReactNode;
+  header?: React.ReactNode;
   children: React.ReactNode;
-  footer: React.ReactNode;
+  footer?: React.ReactNode;
 }
 
 const Modal: React.FC<IModalProps> = ({
@@ -27,9 +27,11 @@ const Modal: React.FC<IModalProps> = ({
           <X size={20} />
         </button>
 
-        <h1 className="rounded-t-lg border-b border-gray-300 py-5 text-center text-xl font-semibold">
-          {header || "Header"}
-        </h1>
+        {header && (
+          <h1 className="rounded-t-lg border-b border-gray-300 py-5 text-center text-xl font-semibold">
+            {header}
+          </h1>
+        )}
 
         <div className="p-6">
           {children || (
@@ -37,9 +39,11 @@ const Modal: React.FC<IModalProps> = ({
           )}
         </div>
 
-        <footer className="rounded-b-lg border-t border-gray-300 py-3 text-center font-medium">
-          {footer || "Footer"}
-        </footer>
+        {footer && (
+          <footer className="rounded-b-lg border-t border-gray-300 py-3 text-center font-medium">
+            {footer}
+          </footer>
+        )}
       </div>
     </div>
   );
