@@ -52,8 +52,8 @@ export interface IModalBodyProps {
   task: string;
   setTask: Dispatch<SetStateAction<string>>;
   handleSubmit: (e: SubmitEvent<HTMLFormElement>) => void;
-  errorTaskMessage: string;
-  setErrorTask: Dispatch<SetStateAction<string>>;
+  errorTaskMessage: string | null;
+  setErrorTask: Dispatch<SetStateAction<string | null>>;
 }
 
 export interface ITodoCardProps {
