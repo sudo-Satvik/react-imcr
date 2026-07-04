@@ -1,5 +1,5 @@
 import React from "react";
-import type { ICalcButtonProps } from "../interfaces";
+import type { ICalcButtonProps } from "./interfaces";
 
 const CalcButton: React.FC<ICalcButtonProps> = ({
   children,
