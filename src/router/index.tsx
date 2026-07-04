@@ -3,6 +3,7 @@ import Portal from "../pages/Portal";
 import MiniProjects from "../pages/MiniProjects";
 import ComingSoon from "../pages/ComingSoon";
 import AdvanceTodo from "../pages/AdvanceTodo";
+import AdvanceCalculator from "../pages/AdvanceCalculator";
 
 export const router = createBrowserRouter([
   {
@@ -15,10 +16,14 @@ export const router = createBrowserRouter([
   },
   {
     path: "/advance-todo",
-    element: <AdvanceTodo />
+    element: <AdvanceTodo />,
+  },
+  {
+    path: "/advance-calculator",
+    element: <AdvanceCalculator />,
   },
   {
     path: "*",
     element: <ComingSoon />,
-  }
+  },
 ]);

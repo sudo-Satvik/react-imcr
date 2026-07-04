@@ -35,8 +35,8 @@ The goal of this repository is to prepare for Frontend Engineer and SDE intervie
 
 ### Intermediate
 
-* [ ] Advance Todo App
-* [ ] Advance Calculator App
+* [x] Advance Todo App
+* [x] Advance Calculator App
 * [ ] GitHub Profile Finder
 * [ ] Search Autocomplete with API Integration
 * [ ] Tic Tac Toe

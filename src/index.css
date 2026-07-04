@@ -19,3 +19,16 @@ button:active {
 body {
     font-family: "Open Sans", sans-serif;
 }
+
+.hide-scrollbar {
+    /* For Firefox */
+    scrollbar-width: none;
+
+    /* For Internet Explorer and Legacy Edge */
+    -ms-overflow-style: none;
+}
+
+/* For Chrome, Safari, and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
