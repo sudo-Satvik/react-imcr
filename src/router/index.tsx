@@ -5,6 +5,7 @@ import ComingSoon from "../pages/ComingSoon";
 import AdvanceTodo from "../pages/AdvanceTodo";
 import AdvanceCalculator from "../pages/AdvanceCalculator";
 import GithubFinder from "../pages/GithubFinder";
+import SearchAutocomplete from "../pages/SearchAutocomplete";
 
 export const router = createBrowserRouter([
   {
@@ -25,7 +26,11 @@ export const router = createBrowserRouter([
   },
   {
     path: "/github-profile-finder",
-    element: <GithubFinder />
+    element: <GithubFinder />,
+  },
+  {
+    path: "/search-autocomplete",
+    element: <SearchAutocomplete />,
   },
   {
     path: "*",

@@ -10,10 +10,10 @@ export default function Portal() {
         { name: "Advance Calculator App", path: "/advance-calculator" },
         { name: "GitHub Profile Finder", path: "/github-profile-finder" },
         { name: "Search Autocomplete with API Integration", path: "/search-autocomplete" },
-        { name: "Tic Tac Toe", path: "/tic-tac-toe" },
         { name: "Feature Flag Implementation", path: "/feature-flag" },
         { name: "Scroll to Top & Bottom", path: "/scroll-to-top-bottom" },
         { name: "Scroll to Particular Section", path: "/scroll-to-section" },
+        { name: "Tic Tac Toe", path: "/tic-tac-toe" },
       ]
     },
     {
